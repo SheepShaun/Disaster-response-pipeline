@@ -7,14 +7,15 @@ This project aims to create pipelines to process disaster messages data and buil
 In a Python script, process_data.py, the data cleaning pipeline, ETL pipeline, was created to: 
 <br/> - Load two datasets: disaster_messages.csv and disaster_categories.csv;
 <br/> - Merges the two datasets;
-<br/> - Cleans the data;
+<br/> - Splits the categories column into separate;
+<br/> - Cleans the data (clearly named columns, converts values to binary, and drops duplicates);
 <br/> - Stores it in a SQLite database (DisasterResponse.db).
 
 2) ML pipeline  <br/>
 A Python script, train_classifier.py, was created to: 
 <br/> - Loads data from the SQLite database;
 <br/> - Splits the dataset into the training set and the test set;
-<br/> - Builds a text processing and machine learning pipeline;
+<br/> - Builds a text processing (using a custom tokenize function using nltk to case normalize, lemmatize, and tokenize text) and machine learning pipeline;
 <br/> - Trains and tunes a model using GridSearchCV;
 <br/> - Outputs results on the test set;
 <br/> - Exports the final model as a pickle file (classifier.pkl).
