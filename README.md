@@ -15,7 +15,7 @@ In a Python script, process_data.py, the data cleaning pipeline, ETL pipeline, w
 A Python script, train_classifier.py, was created to: 
 <br/> - Loads data from the SQLite database;
 <br/> - Splits the dataset into the training set and the test set;
-<br/> - Builds a text processing (using a custom tokenize function using nltk to case normalize, lemmatize, and tokenize text) and machine learning pipeline;
+<br/> - Builds a text processing (using a custom tokenize function using nltk to case normalize, lemmatize, and tokenize text) and machine learning pipeline (to vectorize and then apply TF-IDF to the text);
 <br/> - Trains and tunes a model using GridSearchCV;
 <br/> - Outputs results on the test set;
 <br/> - Exports the final model as a pickle file (classifier.pkl).
