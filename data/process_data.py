@@ -46,11 +46,11 @@ def clean_data(df):
 	
 	row = categories.iloc[0]    # select the first row of the categories dataframe    
 	
-	category_colnames = row.str.split('-').apply(lambda x: x[0])  # use this row to extract a list of new column names for catefories  
+	category_colnames = row.str.split('-').apply(lambda x: x[0])  # use this row to extract a list of new column names for categories  
 	
 	categories.columns = category_colnames  # rename the columns of 'categories'
 
-	# Convert category values to just numbers 0 or 1
+	# Convert category values to just numbers
 	for column in categories:
 	  
 		categories[column] = categories[column].str.split('-').apply(lambda x:x[1])    # set each value to be the last character of the string
@@ -65,6 +65,12 @@ def clean_data(df):
 
 	# Remove duplicates
 	df = df.drop_duplicates()	# drop duplicates
+
+	# For the values for each category, remove the rows with value equals to 2 and only keep rows with binary values (i.e either 0 or 1)
+	categoryName_list = df.columns.tolist()[4:41]   # a list for 36 category names
+
+	for column in categoryName_list:
+		df = df[(df[column] == 0) & (df[columm] == 1)] # only keep rows with binary values, for each category
 
 	return df
 
