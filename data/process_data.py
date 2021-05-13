@@ -70,7 +70,7 @@ def clean_data(df):
 	categoryName_list = df.columns.tolist()[4:41]   # a list for 36 category names
 
 	for column in categoryName_list:
-		df = df[(df[column] == 0) & (df[columm] == 1)] # only keep rows with binary values, for each category
+		df = df[(df[column] == 0) & (df[column] == 1)] # only keep rows with binary values, for each category
 
 	return df
 
