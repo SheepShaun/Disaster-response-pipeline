@@ -1,6 +1,6 @@
 # Disaster-response-pipeline-project
 **Goal:** <br/>
-This project aims to create pipelines to process disaster messages data and build a model for an API in order to classify these disaster messages.
+This project aims to create pipelines to process the message data from major natural disaster around the world and build a model for an API in order to classify these disaster messages. So these messages can be sent to an appropriate disaster relief agency.
 
 **This project includes three parts:** <br/>
 1) ETL pipeline <br/>
